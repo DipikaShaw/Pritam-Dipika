@@ -9,6 +9,11 @@
   box-sizing: border-box;
 }
 
+
+/* =====================================================
+   BASE
+===================================================== */
+
 html {
   scroll-behavior: smooth;
 }
@@ -257,35 +262,81 @@ a {
   letter-spacing: 0.3em;
 }
 
+
+/* =====================================================
+   SCROLL DOWN INDICATOR
+===================================================== */
+
 .scroll-indicator {
   position: absolute;
+
   bottom: 25px;
-  z-index: 3;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
 
   color: #dfc08b;
 
-  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
 
-  animation: scrollDown 1.7s infinite;
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 0.25em;
+
+  text-transform: uppercase;
+  text-align: center;
+
+  animation:
+    scrollDown 1.8s ease-in-out infinite;
+}
+
+.scroll-indicator span {
+  white-space: nowrap;
+}
+
+.scroll-indicator strong {
+  display: block;
+
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1;
 }
 
 @keyframes scrollDown {
 
   0% {
-    transform: translateY(0);
+    transform:
+      translateX(-50%)
+      translateY(0);
+
     opacity: 1;
   }
 
   50% {
-    transform: translateY(10px);
-    opacity: 0.5;
+    transform:
+      translateX(-50%)
+      translateY(9px);
+
+    opacity: 0.55;
   }
 
   100% {
-    transform: translateY(0);
+    transform:
+      translateX(-50%)
+      translateY(0);
+
     opacity: 1;
   }
-
 }
 
 
@@ -593,7 +644,9 @@ h2 {
 
   border: 1px solid #ddc9ad;
 
-  box-shadow: 0 20px 50px rgba(70,30,20,0.07);
+  box-shadow:
+    0 20px 50px
+    rgba(70,30,20,0.07);
 }
 
 .event-icon {
@@ -772,7 +825,8 @@ h2 {
   text-decoration: none;
   text-transform: uppercase;
 
-  transition: background 0.3s ease;
+  transition:
+    background 0.3s ease;
 }
 
 .direction-button:hover {
@@ -825,6 +879,8 @@ h2 {
   overflow: hidden;
 
   background: #ddd;
+
+  cursor: pointer;
 }
 
 .gallery-item.large {
@@ -848,97 +904,6 @@ h2 {
 
 .gallery-item:hover img {
   transform: scale(1.05);
-}
-
-
-/* =====================================================
-   RSVP
-===================================================== */
-
-.rsvp-section {
-  padding: 110px 20px;
-
-  background: #f1e4d4;
-
-  text-align: center;
-}
-
-.rsvp-section h2 {
-  margin-top: 15px;
-
-  color: var(--maroon);
-
-  font-size: clamp(50px, 8vw, 80px);
-}
-
-.rsvp-section > p:not(.section-label) {
-  margin: 20px auto;
-
-  color: var(--soft);
-
-  font-size: 12px;
-}
-
-#rsvpForm {
-  width: min(100%, 550px);
-
-  margin: 35px auto 0;
-
-  display: grid;
-
-  gap: 12px;
-
-  text-align: left;
-}
-
-#rsvpForm input,
-#rsvpForm select,
-#rsvpForm textarea {
-  width: 100%;
-
-  padding: 16px;
-
-  border: 1px solid #d6c0a4;
-
-  background: #fffdf9;
-
-  color: var(--dark);
-
-  font-size: 12px;
-
-  outline: none;
-}
-
-#rsvpForm input:focus,
-#rsvpForm select:focus,
-#rsvpForm textarea:focus {
-  border-color: var(--gold);
-}
-
-#rsvpForm textarea {
-  resize: vertical;
-}
-
-.rsvp-button {
-  padding: 17px;
-
-  border: none;
-
-  background: var(--maroon);
-
-  color: white;
-
-  font-size: 9px;
-  font-weight: 600;
-
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-
-  cursor: pointer;
-}
-
-.rsvp-button:hover {
-  background: #4d0d17;
 }
 
 
@@ -1038,10 +1003,15 @@ h2 {
   text-transform: uppercase;
 
   cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
 }
 
 .share-button:hover {
   background: var(--gold);
+  color: white;
 }
 
 
@@ -1105,38 +1075,47 @@ h2 {
     font-size: 70px;
   }
 
+
   .hero-date {
     font-size: 25px;
   }
+
 
   .countdown {
     gap: 0;
   }
 
+
   .count-box {
     padding: 15px 5px;
   }
 
+
   .count-box strong {
     font-size: 40px;
   }
+
 
   .count-box span {
     font-size: 7px;
     letter-spacing: 0.12em;
   }
 
+
   .story {
     grid-template-columns: 1fr;
   }
+
 
   .story-image {
     min-height: 550px;
   }
 
+
   .story-text {
     padding: 80px 30px;
   }
+
 
   .gallery {
     grid-template-columns: 1fr 1fr;
@@ -1146,25 +1125,44 @@ h2 {
     gap: 8px;
   }
 
+
   .gallery-item.large {
     grid-column: span 2;
     grid-row: span 1;
   }
 
+
   .gallery-item:not(.large) {
     grid-column: span 1;
   }
+
 
   .venue-card {
     padding: 35px 20px;
   }
 
+
   .venue-card h3 {
     font-size: 31px;
   }
 
+
   .couple-names {
     font-size: 48px;
+  }
+
+
+  .scroll-indicator {
+    bottom: 20px;
+
+    font-size: 9px;
+
+    letter-spacing: 0.2em;
+  }
+
+
+  .scroll-indicator strong {
+    font-size: 25px;
   }
 
 }
@@ -1180,16 +1178,24 @@ h2 {
     font-size: 58px;
   }
 
+
   .opening-content h1 {
     font-size: 58px;
   }
+
 
   .count-box strong {
     font-size: 34px;
   }
 
+
   .count-box span {
     font-size: 6px;
+  }
+
+
+  .scroll-indicator {
+    bottom: 15px;
   }
 
 }
