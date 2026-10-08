@@ -1,84 +1,142 @@
 // ==========================================
 // PRITAM WEDS DIPIKA
 // Wedding Invitation
-// 25 November 2026 | 7:00 PM
 // ==========================================
 
 
 // ==========================================
-// OPEN INVITATION
+// OPEN INVITATION + VIDEO SOUND
 // ==========================================
 
-const openingScreen = document.getElementById("openingScreen");
-const openInvitation = document.getElementById("openInvitation");
-const mainContent = document.getElementById("mainContent");
+const openingScreen =
+  document.getElementById("openingScreen");
+
+const openInvitation =
+  document.getElementById("openInvitation");
+
 
 if (openInvitation) {
-  openInvitation.addEventListener("click", () => {
 
-    openingScreen.classList.add("hide");
+  openInvitation.addEventListener(
+    "click",
+    () => {
 
-    // Start the hero video after opening
-    const heroVideo = document.querySelector(".hero-video");
+      // Hide opening screen
+      openingScreen.classList.add("hide");
 
-    if (heroVideo) {
-      heroVideo.play().catch(() => {});
+
+      // Find wedding video
+      const heroVideo =
+        document.querySelector(".hero-video");
+
+
+      if (heroVideo) {
+
+        // Turn sound ON
+        heroVideo.muted = false;
+
+        heroVideo.volume = 1;
+
+
+        // Start video
+        heroVideo.play().catch(
+          (error) => {
+
+            console.log(
+              "Video playback issue:",
+              error
+            );
+
+          }
+        );
+
+      }
+
+
+      // Allow scrolling
+      document.body.style.overflow = "auto";
+
     }
+  );
 
-    // Allow normal scrolling
-    document.body.style.overflow = "auto";
-  });
 }
 
 
+
 // ==========================================
-// WEDDING COUNTDOWN
+// COUNTDOWN
 // ==========================================
 
-const weddingDate = new Date(
-  "2026-11-25T19:00:00+05:30"
-).getTime();
+const weddingDate =
+  new Date(
+    "2026-11-25T19:00:00+05:30"
+  ).getTime();
 
 
 function updateCountdown() {
 
-  const now = new Date().getTime();
+  const now =
+    new Date().getTime();
 
-  const distance = weddingDate - now;
+
+  const distance =
+    weddingDate - now;
 
 
   if (distance <= 0) {
 
-    document.getElementById("days").textContent = "000";
-    document.getElementById("hours").textContent = "00";
-    document.getElementById("minutes").textContent = "00";
-    document.getElementById("seconds").textContent = "00";
+    document.getElementById("days").textContent =
+      "000";
+
+    document.getElementById("hours").textContent =
+      "00";
+
+    document.getElementById("minutes").textContent =
+      "00";
+
+    document.getElementById("seconds").textContent =
+      "00";
 
     return;
+
   }
 
 
-  const days = Math.floor(
-    distance / (1000 * 60 * 60 * 24)
-  );
+  const days =
+    Math.floor(
+      distance /
+      (1000 * 60 * 60 * 24)
+    );
 
 
-  const hours = Math.floor(
-    (distance % (1000 * 60 * 60 * 24))
-    / (1000 * 60 * 60)
-  );
+  const hours =
+    Math.floor(
+      (
+        distance %
+        (1000 * 60 * 60 * 24)
+      ) /
+      (1000 * 60 * 60)
+    );
 
 
-  const minutes = Math.floor(
-    (distance % (1000 * 60 * 60))
-    / (1000 * 60)
-  );
+  const minutes =
+    Math.floor(
+      (
+        distance %
+        (1000 * 60 * 60)
+      ) /
+      (1000 * 60)
+    );
 
 
-  const seconds = Math.floor(
-    (distance % (1000 * 60))
-    / 1000
-  );
+  const seconds =
+    Math.floor(
+      (
+        distance %
+        (1000 * 60)
+      ) /
+      1000
+    );
 
 
   document.getElementById("days").textContent =
@@ -99,15 +157,14 @@ function updateCountdown() {
 }
 
 
-// Start countdown immediately
 updateCountdown();
 
 
-// Update every second
 setInterval(
   updateCountdown,
   1000
 );
+
 
 
 // ==========================================
@@ -115,38 +172,61 @@ setInterval(
 // ==========================================
 
 const galleryItems =
-  document.querySelectorAll(".gallery-item");
+  document.querySelectorAll(
+    ".gallery-item"
+  );
+
 
 const lightbox =
-  document.getElementById("lightbox");
+  document.getElementById(
+    "lightbox"
+  );
+
 
 const lightboxImage =
-  document.getElementById("lightboxImage");
+  document.getElementById(
+    "lightboxImage"
+  );
+
 
 const closeLightbox =
-  document.getElementById("closeLightbox");
+  document.getElementById(
+    "closeLightbox"
+  );
 
 
-galleryItems.forEach((item) => {
+galleryItems.forEach(
+  (item) => {
 
-  item.addEventListener("click", () => {
+    item.addEventListener(
+      "click",
+      () => {
 
-    const image =
-      item.querySelector("img");
+        const image =
+          item.querySelector("img");
 
-    if (!image) return;
 
-    lightboxImage.src =
-      image.src;
+        if (!image) return;
 
-    lightboxImage.alt =
-      image.alt;
 
-    lightbox.classList.add("show");
+        lightboxImage.src =
+          image.src;
 
-  });
 
-});
+        lightboxImage.alt =
+          image.alt;
+
+
+        lightbox.classList.add(
+          "show"
+        );
+
+      }
+    );
+
+  }
+);
+
 
 
 if (closeLightbox) {
@@ -155,12 +235,15 @@ if (closeLightbox) {
     "click",
     () => {
 
-      lightbox.classList.remove("show");
+      lightbox.classList.remove(
+        "show"
+      );
 
     }
   );
 
 }
+
 
 
 if (lightbox) {
@@ -169,9 +252,13 @@ if (lightbox) {
     "click",
     (event) => {
 
-      if (event.target === lightbox) {
+      if (
+        event.target === lightbox
+      ) {
 
-        lightbox.classList.remove("show");
+        lightbox.classList.remove(
+          "show"
+        );
 
       }
 
@@ -179,6 +266,7 @@ if (lightbox) {
   );
 
 }
+
 
 
 // ==========================================
@@ -189,9 +277,13 @@ document.addEventListener(
   "keydown",
   (event) => {
 
-    if (event.key === "Escape") {
+    if (
+      event.key === "Escape"
+    ) {
 
-      lightbox.classList.remove("show");
+      lightbox.classList.remove(
+        "show"
+      );
 
     }
 
@@ -199,63 +291,43 @@ document.addEventListener(
 );
 
 
+
 // ==========================================
-// RSVP → WHATSAPP
+// SHARE INVITATION
 // ==========================================
 
-const rsvpForm =
-  document.getElementById("rsvpForm");
+const shareButton =
+  document.getElementById(
+    "shareButton"
+  );
 
 
-if (rsvpForm) {
+if (shareButton) {
 
-  rsvpForm.addEventListener(
-    "submit",
-    (event) => {
+  shareButton.addEventListener(
+    "click",
+    () => {
 
-      event.preventDefault();
-
-
-      const name =
-        document.getElementById("guestName").value.trim();
-
-
-      const guests =
-        document.getElementById("guestCount").value;
-
-
-      const attendance =
-        document.getElementById("attendance").value;
+      const invitationURL =
+        "https://pritamdipika.vercel.app";
 
 
       const message =
-        document.getElementById("guestMessage").value.trim();
+        `❤️ Pritam Weds Dipika ❤️
 
+You are warmly invited to celebrate our wedding! 💍
 
-      const whatsappText =
+25 November 2026 · 7:00 PM
+Railway Officers Club, Kolkata
 
-`❤️ Pritam Weds Dipika — RSVP ❤️
-
-Name: ${name}
-
-Number of guests: ${guests}
-
-Attendance: ${attendance}
-
-Message:
-${message || "No message"}
-
-Wedding:
-25 November 2026
-7:00 PM
-Railway Officers Club (B. C. Roy Institute)
-Kolkata`;
+Open our wedding invitation:
+${invitationURL}`;
 
 
       const whatsappURL =
         "https://wa.me/?text=" +
         encodeURIComponent(
-          whatsappText
+          message
         );
 
 
@@ -270,88 +342,15 @@ Kolkata`;
 }
 
 
-// ==========================================
-// SHARE INVITATION
-// ==========================================
-
-const shareButton =
-  document.getElementById("shareButton");
-
-
-if (shareButton) {
-
-  shareButton.addEventListener(
-    "click",
-    async () => {
-
-      const shareData = {
-
-        title:
-          "Pritam Weds Dipika ❤️",
-
-        text:
-          "You are invited to celebrate the wedding of Pritam & Dipika ❤️",
-
-        url:
-          window.location.href
-
-      };
-
-
-      // Mobile native share
-      if (navigator.share) {
-
-        try {
-
-          await navigator.share(
-            shareData
-          );
-
-        } catch (error) {
-
-          // User cancelled sharing.
-          console.log(
-            "Share cancelled"
-          );
-
-        }
-
-        return;
-      }
-
-
-      // Desktop fallback
-      try {
-
-        await navigator.clipboard.writeText(
-          window.location.href
-        );
-
-        alert(
-          "Invitation link copied!"
-        );
-
-      } catch (error) {
-
-        alert(
-          "Copy this invitation link:\n\n" +
-          window.location.href
-        );
-
-      }
-
-    }
-  );
-
-}
-
 
 // ==========================================
 // IMAGE FADE-IN
 // ==========================================
 
 const images =
-  document.querySelectorAll("img");
+  document.querySelectorAll(
+    "img"
+  );
 
 
 const imageObserver =
@@ -365,10 +364,13 @@ const imageObserver =
             entry.isIntersecting
           ) {
 
-            entry.target.style.opacity = "1";
+            entry.target.style.opacity =
+              "1";
+
 
             entry.target.style.transform =
               "scale(1)";
+
 
             imageObserver.unobserve(
               entry.target
@@ -389,13 +391,17 @@ const imageObserver =
 images.forEach(
   (image) => {
 
-    image.style.opacity = "0";
+    image.style.opacity =
+      "0";
+
 
     image.style.transform =
       "scale(1.02)";
 
+
     image.style.transition =
       "opacity 0.8s ease, transform 0.8s ease";
+
 
     imageObserver.observe(
       image
@@ -405,11 +411,14 @@ images.forEach(
 );
 
 
+
 // ==========================================
-// PREVENT SCROLL BEFORE OPENING INVITATION
+// PREVENT SCROLL BEFORE OPENING
 // ==========================================
 
-document.body.style.overflow = "hidden";
+document.body.style.overflow =
+  "hidden";
+
 
 
 // ==========================================
