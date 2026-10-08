@@ -1,6 +1,11 @@
 /* =====================================================
    PRITAM WEDS DIPIKA
-   Wedding Invitation Styles
+   PREMIUM WEDDING INVITATION
+===================================================== */
+
+
+/* =====================================================
+   RESET
 ===================================================== */
 
 * {
@@ -8,11 +13,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-
-/* =====================================================
-   BASE
-===================================================== */
 
 html {
   scroll-behavior: smooth;
@@ -50,11 +50,17 @@ a {
 :root {
   --maroon: #681522;
   --deep-maroon: #3b0d16;
+  --dark-maroon: #291317;
+
   --gold: #bd965c;
   --light-gold: #d9bb87;
+
   --cream: #f8f1e7;
+  --cream-dark: #f2e6d6;
+
   --dark: #382322;
   --soft: #806861;
+
   --white: #fffdf9;
 }
 
@@ -66,6 +72,7 @@ a {
 .opening-screen {
   position: fixed;
   inset: 0;
+
   z-index: 9999;
 
   display: flex;
@@ -95,35 +102,46 @@ a {
 
 .opening-content {
   width: min(90%, 700px);
-  text-align: center;
+
   padding: 30px;
+
+  text-align: center;
 }
 
 .opening-flower {
-  color: var(--light-gold);
-  font-size: 42px;
   margin-bottom: 25px;
+
+  color: var(--light-gold);
+
+  font-size: 42px;
 }
 
 .small-title {
   color: #dfc38f;
+
   font-size: 10px;
-  letter-spacing: 0.35em;
   font-weight: 600;
+
+  letter-spacing: 0.35em;
 }
 
 .opening-content h1 {
   margin: 25px 0 10px;
 
   font-family: "Cormorant Garamond", serif;
+
   font-size: clamp(60px, 13vw, 120px);
+
   font-weight: 500;
+
   line-height: 0.85;
 }
 
 .opening-content h1 span {
   color: var(--gold);
+
   font-family: "Great Vibes", cursive;
+
   font-size: 0.65em;
 }
 
@@ -133,20 +151,24 @@ a {
   color: #ead8b6;
 
   font-family: "Great Vibes", cursive;
+
   font-size: 34px;
 }
 
 .open-button {
+  padding: 16px 30px;
+
   border: 1px solid var(--gold);
+
   background: transparent;
 
   color: white;
 
-  padding: 16px 30px;
-
   font-size: 10px;
   font-weight: 600;
+
   letter-spacing: 0.2em;
+
   text-transform: uppercase;
 
   cursor: pointer;
@@ -158,19 +180,22 @@ a {
 
 .open-button:hover {
   background: var(--gold);
+
   color: white;
 }
 
 
 /* =====================================================
-   HERO
+   HERO VIDEO
 ===================================================== */
 
 .hero {
   position: relative;
 
+  width: 100%;
+
+  height: 100svh;
   min-height: 100svh;
-  height: 100vh;
 
   overflow: hidden;
 
@@ -179,33 +204,39 @@ a {
   justify-content: center;
 
   color: white;
+
   background: #26080e;
 }
 
 .hero-video {
   position: absolute;
+
   inset: 0;
 
   width: 100%;
   height: 100%;
 
   object-fit: cover;
+
+  object-position: center center;
 }
 
 .hero-overlay {
   position: absolute;
+
   inset: 0;
 
   background:
     linear-gradient(
       to bottom,
-      rgba(20, 3, 7, 0.2),
+      rgba(20, 3, 7, 0.18),
       rgba(20, 3, 7, 0.78)
     );
 }
 
 .hero-content {
   position: relative;
+
   z-index: 2;
 
   width: 90%;
@@ -219,6 +250,7 @@ a {
 
   font-size: 10px;
   font-weight: 600;
+
   letter-spacing: 0.4em;
 }
 
@@ -226,8 +258,11 @@ a {
   margin: 30px 0 10px;
 
   font-family: "Cormorant Garamond", serif;
+
   font-size: clamp(65px, 14vw, 145px);
+
   font-weight: 500;
+
   line-height: 0.82;
 }
 
@@ -235,23 +270,27 @@ a {
   color: var(--light-gold);
 
   font-family: "Great Vibes", cursive;
+
   font-size: 0.65em;
 }
 
 .hero-script {
   margin-top: 20px;
 
-  font-family: "Great Vibes", cursive;
-  font-size: clamp(30px, 5vw, 45px);
-
   color: #ead4ac;
+
+  font-family: "Great Vibes", cursive;
+
+  font-size: clamp(30px, 5vw, 45px);
 }
 
 .hero-date {
   margin-top: 30px;
 
   font-family: "Cormorant Garamond", serif;
+
   font-size: 30px;
+
   letter-spacing: 0.1em;
 }
 
@@ -259,12 +298,13 @@ a {
   margin-top: 8px;
 
   font-size: 9px;
+
   letter-spacing: 0.3em;
 }
 
 
 /* =====================================================
-   SCROLL DOWN INDICATOR
+   SCROLL DOWN
 ===================================================== */
 
 .scroll-indicator {
@@ -273,28 +313,32 @@ a {
   bottom: 25px;
   left: 50%;
 
-  transform: translateX(-50%);
-
   z-index: 10;
 
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
   justify-content: center;
 
-  gap: 5px;
+  gap: 6px;
 
   color: #dfc08b;
 
   font-family: "Montserrat", sans-serif;
 
-  font-size: 10px;
+  font-size: 11px;
+
   font-weight: 600;
 
   letter-spacing: 0.25em;
 
   text-transform: uppercase;
+
   text-align: center;
+
+  transform: translateX(-50%);
 
   animation:
     scrollDown 1.8s ease-in-out infinite;
@@ -307,8 +351,12 @@ a {
 .scroll-indicator strong {
   display: block;
 
-  font-size: 28px;
+  color: #dfc08b;
+
+  font-size: 38px;
+
   font-weight: 400;
+
   line-height: 1;
 }
 
@@ -325,7 +373,7 @@ a {
   50% {
     transform:
       translateX(-50%)
-      translateY(9px);
+      translateY(10px);
 
     opacity: 0.55;
   }
@@ -334,6 +382,46 @@ a {
     transform:
       translateX(-50%)
       translateY(0);
+
+    opacity: 1;
+  }
+}
+
+
+/* =====================================================
+   SECTION SCROLL INDICATOR
+===================================================== */
+
+.section-scroll {
+  position: relative;
+
+  left: auto;
+  bottom: auto;
+
+  margin: 55px auto 0;
+
+  transform: none;
+
+  animation:
+    sectionScroll 1.8s ease-in-out infinite;
+}
+
+@keyframes sectionScroll {
+
+  0% {
+    transform: translateY(0);
+
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(10px);
+
+    opacity: 0.55;
+  }
+
+  100% {
+    transform: translateY(0);
 
     opacity: 1;
   }
@@ -352,6 +440,7 @@ a {
   margin-bottom: 20px;
 
   color: var(--gold);
+
   font-size: 34px;
 }
 
@@ -359,6 +448,7 @@ a {
   color: var(--gold);
 
   font-size: 9px;
+
   font-weight: 600;
 
   letter-spacing: 0.32em;
@@ -368,6 +458,7 @@ a {
 
 h2 {
   font-family: "Cormorant Garamond", serif;
+
   font-weight: 500;
 }
 
@@ -377,14 +468,18 @@ h2 {
 ===================================================== */
 
 .invitation {
+  position: relative;
+
   min-height: 80vh;
 
-  padding:
-    110px 25px;
+  padding: 110px 25px 80px;
 
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   justify-content: center;
 
   text-align: center;
@@ -396,6 +491,7 @@ h2 {
   color: var(--maroon);
 
   font-size: clamp(48px, 8vw, 82px);
+
   line-height: 0.95;
 }
 
@@ -407,6 +503,7 @@ h2 {
   color: var(--soft);
 
   font-size: 13px;
+
   line-height: 2;
 }
 
@@ -416,11 +513,13 @@ h2 {
   color: var(--maroon);
 
   font-family: "Great Vibes", cursive;
+
   font-size: 55px;
 }
 
 .couple-names span {
   color: var(--gold);
+
   font-size: 30px;
 }
 
@@ -438,7 +537,9 @@ h2 {
 ===================================================== */
 
 .countdown-section {
-  padding: 100px 20px;
+  position: relative;
+
+  padding: 100px 20px 80px;
 
   background: var(--maroon);
 
@@ -463,7 +564,9 @@ h2 {
   margin: 50px auto 0;
 
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+
+  grid-template-columns:
+    repeat(4, 1fr);
 
   gap: 15px;
 }
@@ -471,7 +574,9 @@ h2 {
 .count-box {
   padding: 20px 10px;
 
-  border-left: 1px solid rgba(255,255,255,0.25);
+  border-left:
+    1px solid
+    rgba(255, 255, 255, 0.25);
 }
 
 .count-box:first-child {
@@ -484,7 +589,10 @@ h2 {
   color: #e4c38d;
 
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(45px, 7vw, 70px);
+
+  font-size:
+    clamp(45px, 7vw, 70px);
+
   font-weight: 500;
 }
 
@@ -496,129 +604,21 @@ h2 {
   color: #d7c3b8;
 
   font-size: 8px;
+
   letter-spacing: 0.25em;
+
   text-transform: uppercase;
 }
 
 
 /* =====================================================
-   STORY
-===================================================== */
-
-.story {
-  min-height: 750px;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  background: #291317;
-
-  color: white;
-}
-
-.story-image {
-  min-height: 650px;
-}
-
-.story-image img {
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-}
-
-.story-text {
-  padding: 90px 8vw;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.story-text h2 {
-  margin-top: 18px;
-
-  color: #f7e9d5;
-
-  font-size: clamp(50px, 6vw, 75px);
-  line-height: 0.9;
-}
-
-.story-text p:not(.section-label) {
-  max-width: 500px;
-
-  margin-top: 30px;
-
-  color: #cdbcb4;
-
-  font-size: 13px;
-  line-height: 2;
-}
-
-.story-signature {
-  margin-top: 35px;
-
-  color: var(--light-gold);
-
-  font-family: "Great Vibes", cursive;
-  font-size: 35px;
-}
-
-.story-signature span {
-  color: #d8a4a7;
-}
-
-
-/* =====================================================
-   DATE
-===================================================== */
-
-.date-section {
-  padding: 110px 25px;
-
-  text-align: center;
-}
-
-.date-section h2 {
-  margin-top: 15px;
-
-  color: var(--maroon);
-
-  font-size: clamp(50px, 8vw, 85px);
-}
-
-.large-time {
-  margin-top: 15px;
-
-  color: var(--gold);
-
-  font-family: "Great Vibes", cursive;
-  font-size: 45px;
-}
-
-.date-line {
-  width: 70px;
-  height: 1px;
-
-  margin: 30px auto;
-
-  background: var(--gold);
-}
-
-.date-section > p:last-child {
-  color: var(--soft);
-
-  font-size: 12px;
-  line-height: 2;
-}
-
-
-/* =====================================================
-   EVENT
+   WEDDING CEREMONY
 ===================================================== */
 
 .event-section {
-  padding: 110px 25px;
+  position: relative;
+
+  padding: 110px 25px 80px;
 
   background: #f2e6d6;
 
@@ -646,7 +646,7 @@ h2 {
 
   box-shadow:
     0 20px 50px
-    rgba(70,30,20,0.07);
+    rgba(70, 30, 20, 0.07);
 }
 
 .event-icon {
@@ -661,7 +661,9 @@ h2 {
   color: var(--maroon);
 
   font-family: "Great Vibes", cursive;
+
   font-size: 45px;
+
   font-weight: 400;
 }
 
@@ -671,7 +673,9 @@ h2 {
   color: #7b5e4c;
 
   font-size: 10px;
+
   letter-spacing: 0.15em;
+
   text-transform: uppercase;
 }
 
@@ -681,11 +685,13 @@ h2 {
   color: var(--maroon);
 
   font-family: "Cormorant Garamond", serif;
+
   font-size: 27px;
 }
 
 .event-divider {
   width: 60px;
+
   height: 1px;
 
   margin: 25px auto;
@@ -697,6 +703,7 @@ h2 {
   color: #816b63;
 
   font-size: 12px;
+
   line-height: 1.8;
 }
 
@@ -708,12 +715,12 @@ h2 {
 .venue-section {
   position: relative;
 
-  padding: 110px 20px;
+  padding: 110px 20px 80px;
 
   background:
     linear-gradient(
-      rgba(43,10,17,0.9),
-      rgba(43,10,17,0.95)
+      rgba(43, 10, 17, 0.94),
+      rgba(43, 10, 17, 0.97)
     );
 
   color: white;
@@ -744,9 +751,12 @@ h2 {
 
   padding: 45px 30px;
 
-  background: rgba(255,255,255,0.06);
+  background:
+    rgba(255, 255, 255, 0.06);
 
-  border: 1px solid rgba(216,181,125,0.5);
+  border:
+    1px solid
+    rgba(216, 181, 125, 0.5);
 
   backdrop-filter: blur(10px);
 }
@@ -755,18 +765,24 @@ h2 {
   width: 105px;
   height: 105px;
 
-  margin: 0 auto 25px;
+  margin:
+    0 auto 25px;
 
-  border: 1px solid var(--gold);
+  border:
+    1px solid
+    var(--gold);
+
   border-radius: 50%;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
   color: #e1c38d;
 
   font-family: "Great Vibes", cursive;
+
   font-size: 45px;
 }
 
@@ -780,7 +796,9 @@ h2 {
   color: #f4e8d6;
 
   font-family: "Cormorant Garamond", serif;
+
   font-size: 37px;
+
   font-weight: 500;
 }
 
@@ -790,7 +808,9 @@ h2 {
   color: #d8c5b7;
 
   font-family: "Cormorant Garamond", serif;
+
   font-size: 18px;
+
   font-weight: 400;
 }
 
@@ -800,6 +820,7 @@ h2 {
   color: #cdbbb1;
 
   font-size: 12px;
+
   line-height: 1.9;
 }
 
@@ -814,15 +835,20 @@ h2 {
 
   padding: 15px 25px;
 
-  border: 1px solid var(--gold);
+  border:
+    1px solid
+    var(--gold);
 
   color: white;
 
   font-size: 9px;
+
   font-weight: 600;
 
   letter-spacing: 0.15em;
+
   text-decoration: none;
+
   text-transform: uppercase;
 
   transition:
@@ -839,7 +865,9 @@ h2 {
 ===================================================== */
 
 .gallery-section {
-  padding: 110px 20px;
+  position: relative;
+
+  padding: 110px 20px 80px;
 
   text-align: center;
 }
@@ -885,6 +913,7 @@ h2 {
 
 .gallery-item.large {
   grid-column: span 3;
+
   grid-row: span 2;
 }
 
@@ -917,7 +946,9 @@ h2 {
   min-height: 80vh;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   padding: 60px 20px;
@@ -926,8 +957,8 @@ h2 {
 
   background:
     linear-gradient(
-      rgba(35,5,11,0.75),
-      rgba(35,5,11,0.9)
+      rgba(35, 5, 11, 0.75),
+      rgba(35, 5, 11, 0.9)
     ),
     url("assets/photo-5.jpg")
     center / cover no-repeat;
@@ -937,18 +968,20 @@ h2 {
 
 .closing-overlay {
   position: absolute;
+
   inset: 0;
 
   background:
     radial-gradient(
       circle at center,
-      rgba(130,30,45,0.15),
+      rgba(130, 30, 45, 0.15),
       transparent 60%
     );
 }
 
 .closing-content {
   position: relative;
+
   z-index: 2;
 }
 
@@ -958,6 +991,7 @@ h2 {
   color: #e3c18a;
 
   font-family: "Great Vibes", cursive;
+
   font-size: 38px;
 }
 
@@ -965,7 +999,10 @@ h2 {
   margin-top: 15px;
 
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(60px, 12vw, 120px);
+
+  font-size:
+    clamp(60px, 12vw, 120px);
+
   font-weight: 500;
 }
 
@@ -973,6 +1010,7 @@ h2 {
   color: var(--gold);
 
   font-family: "Great Vibes", cursive;
+
   font-size: 0.7em;
 }
 
@@ -989,13 +1027,16 @@ h2 {
 
   padding: 15px 25px;
 
-  border: 1px solid var(--gold);
+  border:
+    1px solid
+    var(--gold);
 
   background: transparent;
 
   color: white;
 
   font-size: 9px;
+
   font-weight: 600;
 
   letter-spacing: 0.18em;
@@ -1011,6 +1052,7 @@ h2 {
 
 .share-button:hover {
   background: var(--gold);
+
   color: white;
 }
 
@@ -1021,6 +1063,7 @@ h2 {
 
 .lightbox {
   position: fixed;
+
   inset: 0;
 
   z-index: 10000;
@@ -1028,11 +1071,13 @@ h2 {
   display: none;
 
   align-items: center;
+
   justify-content: center;
 
   padding: 25px;
 
-  background: rgba(10,3,5,0.94);
+  background:
+    rgba(10, 3, 5, 0.94);
 }
 
 .lightbox.show {
@@ -1041,7 +1086,9 @@ h2 {
 
 .lightbox img {
   width: auto;
+
   max-width: 95vw;
+
   max-height: 90vh;
 
   object-fit: contain;
@@ -1071,98 +1118,196 @@ h2 {
 
 @media (max-width: 700px) {
 
+  /* HERO */
+
+  .hero {
+    height: 100svh;
+    min-height: 100svh;
+  }
+
+  .hero-video {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center center;
+  }
+
+  .hero-content {
+    width: 92%;
+  }
+
   .hero-content h1 {
     font-size: 70px;
   }
-
 
   .hero-date {
     font-size: 25px;
   }
 
+  .hero-time {
+    font-size: 8px;
 
-  .countdown {
-    gap: 0;
+    letter-spacing: 0.25em;
   }
 
 
-  .count-box {
-    padding: 15px 5px;
+  /* SCROLL */
+
+  .scroll-indicator {
+    bottom: 20px;
+
+    font-size: 10px;
+
+    letter-spacing: 0.2em;
   }
 
-
-  .count-box strong {
+  .scroll-indicator strong {
     font-size: 40px;
   }
 
+  .section-scroll {
+    margin-top: 45px;
 
-  .count-box span {
-    font-size: 7px;
-    letter-spacing: 0.12em;
+    bottom: auto;
   }
 
 
-  .story {
-    grid-template-columns: 1fr;
+  /* INVITATION */
+
+  .invitation {
+    min-height: auto;
+
+    padding:
+      90px 25px 70px;
   }
 
-
-  .story-image {
-    min-height: 550px;
+  .invitation h2 {
+    font-size: 50px;
   }
 
+  .intro-text {
+    font-size: 12px;
 
-  .story-text {
-    padding: 80px 30px;
+    line-height: 1.9;
   }
-
-
-  .gallery {
-    grid-template-columns: 1fr 1fr;
-
-    grid-auto-rows: 190px;
-
-    gap: 8px;
-  }
-
-
-  .gallery-item.large {
-    grid-column: span 2;
-    grid-row: span 1;
-  }
-
-
-  .gallery-item:not(.large) {
-    grid-column: span 1;
-  }
-
-
-  .venue-card {
-    padding: 35px 20px;
-  }
-
-
-  .venue-card h3 {
-    font-size: 31px;
-  }
-
 
   .couple-names {
     font-size: 48px;
   }
 
 
-  .scroll-indicator {
-    bottom: 20px;
+  /* COUNTDOWN */
 
-    font-size: 9px;
+  .countdown-section {
+    padding:
+      85px 15px 70px;
+  }
 
-    letter-spacing: 0.2em;
+  .countdown {
+    gap: 0;
+  }
+
+  .count-box {
+    padding:
+      15px 5px;
+  }
+
+  .count-box strong {
+    font-size: 40px;
+  }
+
+  .count-box span {
+    font-size: 7px;
+
+    letter-spacing: 0.12em;
   }
 
 
-  .scroll-indicator strong {
-    font-size: 25px;
+  /* EVENT */
+
+  .event-section {
+    padding:
+      90px 20px 70px;
+  }
+
+  .event-card {
+    width: 95%;
+
+    padding:
+      40px 20px;
+  }
+
+  .event-card h3 {
+    font-size: 40px;
+  }
+
+
+  /* VENUE */
+
+  .venue-section {
+    padding:
+      90px 15px 70px;
+  }
+
+  .venue-card {
+    padding:
+      35px 20px;
+  }
+
+  .venue-card h3 {
+    font-size: 31px;
+  }
+
+  .venue-card h4 {
+    font-size: 17px;
+  }
+
+  .venue-card > p {
+    font-size: 11px;
+  }
+
+
+  /* GALLERY */
+
+  .gallery-section {
+    padding:
+      90px 15px 70px;
+  }
+
+  .gallery {
+    grid-template-columns:
+      1fr 1fr;
+
+    grid-auto-rows: 190px;
+
+    gap: 8px;
+  }
+
+  .gallery-item.large {
+    grid-column: span 2;
+
+    grid-row: span 1;
+  }
+
+  .gallery-item:not(.large) {
+    grid-column: span 1;
+  }
+
+
+  /* CLOSING */
+
+  .closing-section {
+    min-height: 75vh;
+  }
+
+  .closing-content h2 {
+    font-size: 70px;
+  }
+
+  .closing-script {
+    font-size: 32px;
   }
 
 }
@@ -1178,24 +1323,46 @@ h2 {
     font-size: 58px;
   }
 
-
   .opening-content h1 {
     font-size: 58px;
   }
 
+  .hero-date {
+    font-size: 22px;
+  }
 
   .count-box strong {
     font-size: 34px;
   }
 
-
   .count-box span {
     font-size: 6px;
   }
 
-
   .scroll-indicator {
     bottom: 15px;
+
+    font-size: 9px;
+  }
+
+  .scroll-indicator strong {
+    font-size: 36px;
+  }
+
+  .section-scroll {
+    margin-top: 40px;
+  }
+
+  .couple-names {
+    font-size: 43px;
+  }
+
+  .event-card h3 {
+    font-size: 36px;
+  }
+
+  .venue-card h3 {
+    font-size: 28px;
   }
 
 }
