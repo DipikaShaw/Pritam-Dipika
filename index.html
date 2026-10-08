@@ -37,7 +37,7 @@
   >
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   >
 
@@ -87,6 +87,7 @@
       <button
         class="open-button"
         id="openInvitation"
+        type="button"
       >
         Open Invitation
       </button>
@@ -105,10 +106,13 @@
 
 
     <!-- =================================================
-         HERO VIDEO
+         HERO
     ================================================== -->
 
-    <section class="hero">
+    <section
+      class="hero"
+      id="hero"
+    >
 
       <video
         class="hero-video"
@@ -159,9 +163,14 @@
       </div>
 
 
-      <!-- SCROLL -->
+      <!-- SCROLL TO INVITATION -->
 
-      <div class="scroll-indicator">
+      <button
+        class="scroll-indicator"
+        data-next="invitation"
+        type="button"
+        aria-label="Scroll to invitation"
+      >
 
         <span>
           SCROLL DOWN
@@ -171,7 +180,7 @@
           ↓
         </strong>
 
-      </div>
+      </button>
 
     </section>
 
@@ -181,7 +190,10 @@
          INVITATION
     ================================================== -->
 
-    <section class="invitation section-light">
+    <section
+      class="invitation section-light"
+      id="invitation"
+    >
 
       <div class="ornament">
         ❦
@@ -229,9 +241,14 @@
       </p>
 
 
-      <!-- SCROLL -->
+      <!-- SCROLL TO COUNTDOWN -->
 
-      <div class="scroll-indicator section-scroll">
+      <button
+        class="scroll-indicator section-scroll"
+        data-next="countdown"
+        type="button"
+        aria-label="Scroll to countdown"
+      >
 
         <span>
           SCROLL DOWN
@@ -241,7 +258,7 @@
           ↓
         </strong>
 
-      </div>
+      </button>
 
     </section>
 
@@ -251,7 +268,10 @@
          COUNTDOWN
     ================================================== -->
 
-    <section class="countdown-section">
+    <section
+      class="countdown-section"
+      id="countdown"
+    >
 
       <p class="section-label">
         THE COUNTDOWN BEGINS
@@ -321,9 +341,14 @@
       </div>
 
 
-      <!-- SCROLL -->
+      <!-- SCROLL TO CEREMONY -->
 
-      <div class="scroll-indicator section-scroll">
+      <button
+        class="scroll-indicator section-scroll"
+        data-next="ceremony"
+        type="button"
+        aria-label="Scroll to wedding ceremony"
+      >
 
         <span>
           SCROLL DOWN
@@ -333,7 +358,7 @@
           ↓
         </strong>
 
-      </div>
+      </button>
 
     </section>
 
@@ -343,7 +368,10 @@
          WEDDING CEREMONY
     ================================================== -->
 
-    <section class="event-section">
+    <section
+      class="event-section"
+      id="ceremony"
+    >
 
       <p class="section-label">
         THE CELEBRATION
@@ -390,9 +418,14 @@
       </div>
 
 
-      <!-- SCROLL -->
+      <!-- SCROLL TO VENUE -->
 
-      <div class="scroll-indicator section-scroll">
+      <button
+        class="scroll-indicator section-scroll"
+        data-next="venue"
+        type="button"
+        aria-label="Scroll to venue"
+      >
 
         <span>
           SCROLL DOWN
@@ -402,7 +435,7 @@
           ↓
         </strong>
 
-      </div>
+      </button>
 
     </section>
 
@@ -412,10 +445,10 @@
          VENUE
     ================================================== -->
 
-    <section class="venue-section">
-
-      <div class="venue-background"></div>
-
+    <section
+      class="venue-section"
+      id="venue"
+    >
 
       <div class="venue-content">
 
@@ -488,9 +521,14 @@
       </div>
 
 
-      <!-- SCROLL -->
+      <!-- SCROLL TO GALLERY -->
 
-      <div class="scroll-indicator section-scroll">
+      <button
+        class="scroll-indicator section-scroll"
+        data-next="gallery"
+        type="button"
+        aria-label="Scroll to gallery"
+      >
 
         <span>
           SCROLL DOWN
@@ -500,7 +538,7 @@
           ↓
         </strong>
 
-      </div>
+      </button>
 
     </section>
 
@@ -510,7 +548,10 @@
          PHOTO GALLERY
     ================================================== -->
 
-    <section class="gallery-section section-light">
+    <section
+      class="gallery-section section-light"
+      id="gallery"
+    >
 
 
       <p class="section-label">
@@ -583,77 +624,6 @@
 
       </div>
 
-
-      <!-- SCROLL -->
-
-      <div class="scroll-indicator section-scroll">
-
-        <span>
-          SCROLL DOWN
-        </span>
-
-        <strong>
-          ↓
-        </strong>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =================================================
-         FINAL MESSAGE
-    ================================================== -->
-
-    <section class="closing-section">
-
-
-      <div class="closing-overlay"></div>
-
-
-      <div class="closing-content">
-
-
-        <div class="ornament">
-          ❦
-        </div>
-
-
-        <p class="closing-script">
-          Forever starts here
-        </p>
-
-
-        <h2>
-
-          Pritam
-
-          <span>
-            &amp;
-          </span>
-
-          Dipika
-
-        </h2>
-
-
-        <p>
-          25 November 2026 · Kolkata
-        </p>
-
-
-        <button
-          id="shareButton"
-          class="share-button"
-        >
-          Share Invitation
-        </button>
-
-
-      </div>
-
-
     </section>
 
 
@@ -670,10 +640,11 @@
     id="lightbox"
   >
 
-
     <button
       class="close-lightbox"
       id="closeLightbox"
+      type="button"
+      aria-label="Close image"
     >
       ×
     </button>
@@ -685,14 +656,11 @@
       alt="Wedding memory"
     >
 
-
   </div>
 
 
 
-  <!-- =================================================
-       JAVASCRIPT
-  ================================================== -->
+  <!-- JAVASCRIPT -->
 
   <script src="script.js"></script>
 
