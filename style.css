@@ -227,3 +227,40 @@ body.invitation-open .gallery-section { display: block; }
 .hero-content h2 span {
   font-size: 0.85em;
 }
+/* Move the invitation line higher */
+.hero-content > .eyebrow {
+  margin-top: -35px;
+  margin-bottom: 8px;
+}
+
+/* Keep the names prominent and well spaced */
+.hero-content h2 {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+/* Remove the venue/time line from the video page */
+.hero-content .event-time {
+  display: none !important;
+}
+
+/* Hide the video helper text */
+#videoStatus {
+  display: none !important;
+}
+
+/* Make the Venue & Directions arrow bigger */
+.hero-content .scroll-cue strong {
+  font-size: 2.5rem;
+  line-height: 1;
+  display: block;
+  margin-top: 8px;
+}
+
+/* Never show a scroll cue on the opening cover */
+.cover-screen .scroll-cue,
+.cover-screen .cover-scroll {
+  display: none !important;
+}
