@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#641522">
+  <meta name="description" content="Pritam & Dipika invite you to their reception on 27 November 2026 at 7 PM.">
+  <title>Pritam &amp; Dipika | Reception Invitation</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <section class="intro-screen" id="introScreen" aria-label="Wedding invitation cover">
+    <div class="intro-inner">
+      <div class="intro-flower">❦</div>
+      <p class="intro-eyebrow">YOU ARE CORDIALLY INVITED BY</p>
+      <h1 class="intro-names"><span class="name-line">Pritam</span><span class="ampersand">&amp;</span><span class="name-line">Dipika</span></h1>
+      <p class="intro-script">to celebrate our forever</p>
+      <button class="open-invitation" id="openInvitation" type="button">OPEN INVITATION</button>
+    </div>
+  </section>
+
+  <audio id="backgroundMusic" loop preload="auto">
+    <source src="assets/wedding-song.mp3" type="audio/mpeg">
+    Your browser does not support audio playback.
+  </audio>
+
+  <main>
+    <section class="hero" id="welcome">
+      <div class="hero-content">
+        <div class="flower">❦</div>
+        <p class="eyebrow">WITH JOY IN OUR HEARTS, WE INVITE YOU</p>
+        <h1>Pritam <span>&amp;</span> Dipika</h1>
+        <p class="script">to celebrate our reception</p>
+        <div class="divider"></div>
+        <p class="event-date">27 NOVEMBER 2026</p>
+        <p class="event-time">7:00 PM ONWARDS</p>
+        <p class="invitation-message">
+          Join us for an evening of love, laughter, and beautiful memories.
+          Your presence will make our celebration truly special.
+        </p>
+        <a class="scroll-cue" href="#video" aria-label="Scroll to the wedding video">
+          <span>WATCH OUR INVITATION</span><strong>↓</strong>
+        </a>
+      </div>
+    </section>
+
+    <section class="video-section" id="video">
+      <p class="section-label">A LITTLE SOMETHING FROM US</p>
+      <h2>Our Invitation</h2>
+      <p class="video-caption">A moment to remember</p>
+      <div class="video-frame">
+        <!-- Rename your video to wedding-video.mp4, or change this src to its exact filename in assets/. -->
+        <video
+          class="invitation-video"
+          id="invitationVideo"
+          controls
+          playsinline
+          preload="metadata"
+          poster="assets/reception-background.jpg"
+          aria-label="Pritam and Dipika wedding invitation video">
+          <source src="assets/wedding-video.mp4" type="video/mp4">
+          Your browser does not support HTML video.
+        </video>
+      </div>
+      <p class="video-hint" id="videoHint" aria-live="polite">Tap the video to pause or resume. Use the controls for volume and seeking.</p>
+      <a class="scroll-cue" href="#venue" aria-label="Scroll to venue and directions">
+        <span>VENUE &amp; DIRECTIONS</span><strong>↓</strong>
+      </a>
+    </section>
+
+    <section class="details" id="venue">
+      <div class="details-inner">
+        <p class="section-label">LET'S CELEBRATE TOGETHER</p>
+        <h2>Reception Party</h2>
+        <p class="details-script">Pritam &amp; Dipika</p>
+        <div class="card">
+          <div class="venue-flower">✦</div>
+          <h3>ROYAL PALACE BANQUET</h3>
+          <p class="venue-caption">27 November 2026 · 7:00 PM</p>
+          <p class="venue-address">82, Kaiser Street,<br>Eastern Railway Sealdah,<br>Kolkata – 700014</p>
+          <p class="venue-note">
+            We would be delighted to celebrate this special evening with you.
+            Tap below for directions to the venue.
+          </p>
+          <a class="map-button"
+             href="https://www.google.com/maps/search/?api=1&amp;query=82%2C%20Kaiser%20Street%2C%20Eastern%20Railway%20Sealdah%2C%20Kolkata%20700014"
+             target="_blank" rel="noopener noreferrer">
+            📍 OPEN MAP &amp; GET DIRECTIONS
+          </a>
+        </div>
+        <p class="footer">WITH LOVE, PRITAM &amp; DIPIKA</p>
+      </div>
+    </section>
+  </main>
+
+  <button class="music-toggle" id="musicToggle" type="button" aria-pressed="false" aria-label="Toggle background music">
+    <span class="music-dot"></span><span id="musicLabel">Play music</span>
+  </button>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>
