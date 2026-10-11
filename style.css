@@ -1,0 +1,580 @@
+:root {
+      --wine: #641522;
+      --deep: #250910;
+      --gold: #e3c18a;
+      --cream: #fff8f0;
+      --rose: #f0d7d1;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--deep);
+      color: var(--cream);
+      font-family: Montserrat, Arial, sans-serif;
+    }
+
+    .hero {
+      min-height: 100svh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 70px 22px;
+      background:
+        linear-gradient(180deg, #1b07094f, #260810b8),
+        url("assets/reception-background.jpg") center 35% / cover no-repeat;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border: 1px solid #e3c18a9c;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      width: min(760px, 100%);
+    }
+
+    .hero-content::before,
+    .hero-content::after {
+      content: "✦";
+      position: absolute;
+      color: #ffe6a9;
+      pointer-events: none;
+      opacity: .8;
+      animation: twinkle 2.8s ease-in-out infinite;
+    }
+
+    .hero-content::before {
+      top: 10%;
+      left: 5%;
+      font-size: 1.25rem;
+      text-shadow: 0 0 12px #ffe8a5;
+    }
+
+    .hero-content::after {
+      right: 4%;
+      bottom: 17%;
+      font-size: 1rem;
+      animation-delay: 1.2s;
+      text-shadow: 0 0 14px #ffe8a5;
+    }
+
+    .flower {
+      font-size: 2.1rem;
+      color: var(--gold);
+      margin-bottom: 18px;
+      text-shadow: 0 0 9px #ffe7b5, 0 0 22px #d7a65a;
+      animation: glow 3s ease-in-out infinite;
+    }
+
+    .eyebrow {
+      font-size: .67rem;
+      letter-spacing: .27em;
+      line-height: 1.8;
+      color: #f1d7b8;
+      font-weight: 600;
+    }
+
+    h1, h2, h3 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(3.7rem, 11vw, 7.7rem);
+      line-height: .88;
+      margin: 26px 0;
+      background: linear-gradient(
+        105deg,
+        #fff8e9 15%,
+        #f0d39a 35%,
+        #fffdf5 50%,
+        #d8ad67 65%,
+        #fff4df 82%
+      );
+      background-size: 220% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: shine 5s linear infinite;
+      filter: drop-shadow(0 2px 18px #f4d18b3b);
+    }
+
+    h1 span {
+      display: block;
+      font-family: "Great Vibes", cursive;
+      color: var(--gold);
+      font-size: .62em;
+      line-height: 1.1;
+      margin: 10px 0;
+    }
+
+    .script {
+      font-family: "Great Vibes", cursive;
+      color: #f2d4c1;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      margin: 18px 0;
+      text-shadow: 0 0 15px #e8b88a77;
+    }
+
+    .divider {
+      width: 80px;
+      height: 1px;
+      background: var(--gold);
+      margin: 25px auto;
+    }
+
+    .event-date {
+      font-size: .86rem;
+      font-weight: 600;
+      letter-spacing: .19em;
+      margin: 12px 0;
+    }
+
+    .event-time {
+      font-size: .72rem;
+      letter-spacing: .2em;
+      color: #f3dfd0;
+    }
+
+    .invitation-message {
+      position: relative;
+      max-width: 680px;
+      margin: 34px auto 0;
+      padding: 30px 34px 28px;
+      border-top: 1px solid rgba(255, 226, 183, .72);
+      border-bottom: 1px solid rgba(255, 226, 183, .72);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.12rem, 2.7vw, 1.35rem);
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.9;
+      letter-spacing: .025em;
+      color: #fff8ee;
+      text-shadow: 0 2px 16px rgba(30, 10, 10, .28);
+    }
+
+    .invitation-message::before {
+      content: "“";
+      display: block;
+      margin: 0 auto 2px;
+      color: #f1d09a;
+      font-family: Georgia, serif;
+      font-size: 4.3rem;
+      font-style: normal;
+      line-height: .75;
+      text-shadow: 0 0 18px rgba(241, 208, 154, .25);
+    }
+
+    .scroll-cue {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 9px;
+      align-items: center;
+      margin-top: 32px;
+      color: var(--cream);
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: .2em;
+      animation: scrollDown 1.8s ease-in-out infinite;
+    }
+
+    .scroll-cue strong {
+      font-size: 2.8rem;
+      font-weight: 400;
+      line-height: 1;
+      color: var(--gold);
+    }
+
+    .section-label {
+      font-size: .66rem;
+      letter-spacing: .24em;
+      color: #98515b;
+      font-weight: 700;
+      margin: 0 0 16px;
+    }
+
+    .details {
+      min-height: 95svh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 22px;
+      background: linear-gradient(155deg, #fff8f0, #f0d7d1);
+      color: #351017;
+    }
+
+    .details-inner {
+      width: min(620px, 100%);
+    }
+
+    .details h2 {
+      font-size: clamp(2.7rem, 7vw, 4.7rem);
+      line-height: 1;
+    }
+
+    .details-script {
+      font-family: "Great Vibes", cursive;
+      color: #96515d;
+      font-size: 2rem;
+      margin: 13px 0 30px;
+    }
+
+    .card {
+      background: #fffaf6;
+      border: 1px solid #d2ad8c;
+      padding: clamp(25px, 6vw, 48px);
+      box-shadow: 0 18px 55px #561d2514;
+    }
+
+    .venue-flower {
+      font-size: 1.8rem;
+      color: #a76a63;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      font-size: clamp(2.2rem, 6vw, 3.2rem);
+      color: var(--wine);
+      line-height: 1.05;
+    }
+
+    .venue-caption {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.15rem;
+      color: #80525a;
+      margin: 12px 0 20px;
+    }
+
+    .venue-note {
+      font-size: .8rem;
+      line-height: 1.8;
+      color: #68464a;
+      margin: 0 auto 22px;
+      max-width: 420px;
+    }
+
+    .map-button {
+      display: inline-block;
+      background: var(--wine);
+      color: white;
+      text-decoration: none;
+      padding: 15px 23px;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .09em;
+      transition: background .2s, transform .2s;
+    }
+
+    .map-button:hover {
+      background: #85293b;
+      transform: translateY(-2px);
+    }
+
+    .footer {
+      font-size: .63rem;
+      letter-spacing: .17em;
+      color: #8f5a61;
+      margin-top: 28px;
+    }
+
+    /* Background music control */
+    .music-toggle {
+      position: fixed;
+      z-index: 10;
+      right: 16px;
+      bottom: 16px;
+      border: 1px solid var(--gold);
+      background: #35101aef;
+      color: var(--cream);
+      border-radius: 999px;
+      padding: 12px 16px;
+      cursor: pointer;
+      font-size: .74rem;
+      letter-spacing: .04em;
+      box-shadow: 0 7px 24px #0005;
+    }
+
+    .music-dot {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+      margin-right: 8px;
+    }
+
+    .music-toggle[aria-pressed="true"] .music-dot {
+      background: #a6e2ae;
+    }
+
+
+    /* Opening invitation cover */
+    .intro-screen { position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center; text-align: center; padding: 28px 20px; background: radial-gradient(ellipse at center, #5b1425 0%, #3b0b18 58%, #21060d 100%); color: var(--cream); transition: opacity .8s ease, visibility .8s ease; }
+    .intro-screen.is-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    .intro-inner { width: min(620px, 100%); animation: introAppear 1.2s ease both; }
+    .intro-flower { color: var(--gold); font-size: 2.5rem; margin-bottom: 28px; text-shadow: 0 0 18px #e3c18a88; }
+    .intro-eyebrow { color: var(--gold); font-size: .68rem; letter-spacing: .28em; font-weight: 700; margin-bottom: 32px; }
+    .intro-names { display: flex; flex-direction: column; align-items: center; font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(3.7rem, 10vw, 7rem); line-height: 1; color: #fff8f0; margin: 0; font-weight: 500; }
+    .intro-names .name-line {
+      display: block;
+      color: #fff8f0;
+      font-size: 1em;
+      font-style: normal;
+      line-height: 1;
+      margin: 0;
+    }
+    .intro-names .ampersand {
+      display: block;
+      color: var(--gold);
+      font-size: .62em;
+      font-style: italic;
+      line-height: 1;
+      margin: 8px 0;
+    }
+    .intro-script { font-family: "Great Vibes", cursive; color: #f0d7d1; font-size: clamp(1.8rem, 5vw, 2.7rem); margin: 22px 0 36px; }
+    .open-invitation { display: inline-block; border: 1px solid var(--gold); background: transparent; color: var(--cream); padding: 17px 30px; font-size: .7rem; font-weight: 700; letter-spacing: .18em; cursor: pointer; transition: background .25s ease, transform .25s ease; }
+    .open-invitation:hover { background: #e3c18a1c; transform: translateY(-2px); }
+    @keyframes introAppear { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+
+    @keyframes shine {
+      to { background-position: 220% center; }
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: .25; transform: scale(.8) rotate(0deg); }
+      50% { opacity: 1; transform: scale(1.25) rotate(25deg); }
+    }
+
+    @keyframes glow {
+      0%, 100% { filter: brightness(.9); }
+      50% { filter: brightness(1.35); }
+    }
+
+    @keyframes scrollDown {
+      0%, 100% { transform: translateY(0); opacity: 1; }
+      50% { transform: translateY(10px); opacity: .65; }
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        min-height: 100svh;
+        padding: 24px 18px 30px;
+        /* Shift the photograph slightly right so Pritam's face sits clear of the centered text. */
+        background-position: 0% 35%;
+      }
+
+      .hero::after {
+        inset: 9px;
+      }
+
+      .hero-content {
+        width: 100%;
+        max-width: 440px;
+      }
+
+      .hero-content::before {
+        top: 8%;
+        left: 2%;
+      }
+
+      .hero-content::after {
+        right: 2%;
+        bottom: 12%;
+      }
+
+      .flower {
+        font-size: 1.25rem;
+        margin-top: -8px;
+        margin-bottom: 1px;
+      }
+
+      .eyebrow {
+        font-size: .58rem;
+        letter-spacing: .11em;
+        line-height: 1.4;
+        margin: -3px 0 3px;
+      }
+
+      .hero h1 {
+        font-size: clamp(1.75rem, 6.2vw, 2.25rem);
+        line-height: .92;
+        margin: 5px 0;
+      }
+
+      .hero h1 span {
+        margin: 1px 0;
+        line-height: .9;
+      }
+
+      .script {
+        font-size: clamp(1rem, 3.8vw, 1.25rem);
+        margin: 5px 0;
+      }
+
+      .divider {
+        margin: 11px auto;
+      }
+
+      .event-date {
+        font-size: .52rem;
+        letter-spacing: .08em;
+        margin: 5px 0;
+      }
+
+      .event-time {
+        font-size: .48rem;
+        letter-spacing: .09em;
+      }
+
+      .invitation-message {
+        max-width: 430px;
+        margin: 12px auto 0;
+        padding: 10px 12px 11px;
+        font-size: .94rem;
+        line-height: 1.48;
+        letter-spacing: 0;
+        background: transparent;
+        border-top: 1px solid rgba(255, 226, 183, .65);
+        border-bottom: 1px solid rgba(255, 226, 183, .85);
+      }
+
+      .invitation-message::before {
+        font-size: 1.7rem;
+        margin: 0 auto 3px;
+        line-height: .8;
+      }
+
+      .scroll-cue {
+        margin-top: 11px;
+        font-size: .68rem;
+        letter-spacing: .13em;
+      }
+
+      .scroll-cue strong {
+        font-size: 1.8rem;
+      }
+
+      .details {
+        padding: 65px 18px;
+      }
+    }
+
+    /* On very narrow phones, keep the text compact and centered. */
+    @media (max-width: 380px) {
+      .hero {
+        padding: 20px 14px 26px;
+        background-position: 0% 27%;
+      }
+
+      .hero h1 {
+        font-size: clamp(1.65rem, 6vw, 2rem);
+      }
+
+      .script {
+        font-size: 1rem;
+      }
+
+      .event-date {
+        font-size: .48rem;
+      }
+
+      .event-time {
+        font-size: .45rem;
+      }
+
+      .invitation-message {
+        font-size: .88rem;
+        padding: 9px 10px;
+        background: transparent;
+      }
+
+      .eyebrow {
+        font-size: .45rem;
+        letter-spacing: .09em;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      h1, .flower, .hero-content::before, .hero-content::after,
+      .scroll-cue {
+        animation: none;
+      }
+    }
+
+/* Reception video: tap/click the video to pause or resume. */
+.video-section {
+  min-height: 80svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 72px 20px;
+  background: radial-gradient(ellipse at center, #511622 0%, #2a0c13 100%);
+}
+.video-section .section-label { color: var(--gold); }
+.video-section h2 {
+  color: var(--cream);
+  font-size: clamp(2.4rem, 7vw, 4rem);
+  margin-bottom: 12px;
+}
+.video-caption {
+  font-family: "Great Vibes", cursive;
+  color: #f0d1b5;
+  font-size: 1.8rem;
+  margin: 0 0 28px;
+}
+.video-frame {
+  position: relative;
+  width: min(900px, 100%);
+  border: 1px solid #e3c18a99;
+  padding: 8px;
+  background: #16070b;
+  box-shadow: 0 18px 60px #0005;
+}
+.invitation-video {
+  display: block;
+  width: 100%;
+  max-height: 72svh;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #100609;
+  cursor: pointer;
+}
+.video-hint {
+  color: #f3dfd0;
+  font-size: .75rem;
+  letter-spacing: .04em;
+  margin: 14px 0 0;
+}
+.venue-address {
+  color: #68464a;
+  font-size: .92rem;
+  line-height: 1.8;
+  margin: 0 auto 20px;
+}
+@media (max-width: 600px) {
+  .video-section { padding: 58px 16px; min-height: auto; }
+  .video-frame { padding: 5px; }
+  .invitation-video { aspect-ratio: 9 / 16; max-height: 70svh; }
+  .video-hint { font-size: .7rem; line-height: 1.6; }
+}
+
