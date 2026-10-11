@@ -318,3 +318,86 @@ body.invitation-open .gallery-section { display: block; }
     font-size: 3rem;
   }
 }
+
+/* --- Wedding video page refinements --- */
+
+/* Move the invitation line upward */
+.hero-content > .eyebrow {
+  transform: translateY(-22px);
+  margin-bottom: 0;
+}
+
+/* Keep the names centered and clearly visible */
+.hero-content h2 {
+  margin-top: -8px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Remove the gold divider line */
+.hero-content .divider {
+  display: none !important;
+}
+
+/* Make the pause/play button transparent */
+.hero-content .video-toggle {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  width: 54px;
+  height: 54px;
+}
+
+/* Keep the pause/play symbol visible */
+.hero-content .video-toggle-icon {
+  background: transparent !important;
+  color: #fffaf2;
+  font-size: 28px;
+}
+
+/* Make the video content fill the screen */
+.hero-content {
+  box-sizing: border-box;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+/* Position Venue & Directions near the bottom */
+.hero-content .scroll-cue {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  top: auto;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  z-index: 5;
+}
+
+/* Enlarge the downward arrow */
+.hero-content .scroll-cue strong {
+  display: block;
+  font-size: 3.5rem;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+/* Keep the bottom spacing comfortable on phones */
+@media (max-width: 600px) {
+  .hero-content .scroll-cue {
+    bottom: 18px;
+  }
+
+  .hero-content .scroll-cue strong {
+    font-size: 3.2rem;
+  }
+
+  .hero-content .video-toggle {
+    width: 48px;
+    height: 48px;
+  }
+}
