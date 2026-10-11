@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,77 +7,201 @@
   <meta name="theme-color" content="#641522">
   <meta name="description" content="Dipika & Pritam invite you to celebrate their wedding on 25 November 2026 at Railway Officers Club, Kolkata.">
   <title>Dipika &amp; Pritam | Wedding Invitation</title>
+
   <link rel="manifest" href="./manifest.json">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
   <main>
-    <!-- PAGE 1: elegant invitation cover, inspired by the reference screenshot -->
+
+    <!-- PAGE 1: Wedding invitation cover -->
     <section class="cover-screen" id="cover" aria-label="Wedding invitation cover">
       <div class="cover-ornament" aria-hidden="true">❦</div>
+
       <p class="cover-eyebrow">YOU ARE CORDIALLY INVITED BY</p>
-      <h1 class="cover-names"><span>Dipika</span><em>&amp;</em><span>Pritam</span></h1>
+
+      <h1 class="cover-names">
+        <span>Dipika</span>
+        <em>&amp;</em>
+        <span>Pritam</span>
+      </h1>
+
       <p class="cover-script">to celebrate our forever</p>
-      <button class="open-invitation" id="openInvitation" type="button">OPEN INVITATION</button>
+
+      <button class="open-invitation" id="openInvitation" type="button">
+        OPEN INVITATION
+      </button>
     </section>
 
-    <!-- PAGE 2: wedding video with central icon-only pause/play control -->
+
+    <!-- PAGE 2: Wedding video invitation -->
     <section class="hero" id="videoPage" aria-label="Wedding video invitation">
-      <video class="hero-video" id="heroVideo" muted playsinline preload="metadata" poster="assets/reception-background.jpg" aria-label="Dipika and Pritam wedding invitation video">
+
+      <video
+        class="hero-video"
+        id="heroVideo"
+        muted
+        playsinline
+        preload="metadata"
+        poster="assets/reception-background.jpg"
+        aria-label="Dipika and Pritam wedding invitation video">
+
         <source src="assets/wedding-video.mp4" type="video/mp4">
         Your browser does not support HTML video.
       </video>
+
       <div class="hero-overlay" aria-hidden="true"></div>
+
       <div class="hero-content">
+
         <p class="eyebrow">WITH JOY IN OUR HEARTS, WE INVITE YOU</p>
+
         <h2>Dipika <span>&amp;</span> Pritam</h2>
+
         <p class="script">to celebrate our wedding</p>
+
         <div class="divider"></div>
+
         <p class="event-date">25 NOVEMBER 2026</p>
-        <p class="event-time">RAILWAY OFFICERS CLUB · KOLKATA</p>
-        <button class="video-toggle" id="videoToggle" type="button" aria-label="Play wedding video with sound" aria-pressed="false"><span class="video-toggle-icon" id="videoToggleIcon" aria-hidden="true">▶</span></button>
-        <p class="video-status" id="videoStatus" aria-live="polite">Tap play to watch our invitation with music</p>
-        <a class="scroll-cue" href="#venue" aria-label="Scroll down to venue details"><span>VENUE &amp; DIRECTIONS</span><strong>↓</strong></a>
+
+        <!-- Centre play/pause button -->
+        <button
+          class="video-toggle"
+          id="videoToggle"
+          type="button"
+          aria-label="Play wedding video with sound"
+          aria-pressed="false">
+
+          <span
+            class="video-toggle-icon"
+            id="videoToggleIcon"
+            aria-hidden="true">▶</span>
+        </button>
+
+        <!-- Venue navigation; no helper text -->
+        <a
+          class="scroll-cue"
+          href="#venue"
+          aria-label="Venue and directions">
+
+          <span>VENUE &amp; DIRECTIONS</span>
+          <strong>↓</strong>
+        </a>
+
       </div>
     </section>
 
-    <!-- PAGE 3: venue and directions -->
+
+    <!-- PAGE 3: Wedding venue and directions -->
     <section class="details" id="venue">
       <div class="details-inner">
+
         <p class="section-label">LET'S CELEBRATE TOGETHER</p>
+
         <h2>Our Wedding Day</h2>
+
         <p class="details-script">Dipika &amp; Pritam</p>
+
         <div class="card">
           <div class="venue-flower" aria-hidden="true">✦</div>
+
           <h3>RAILWAY OFFICERS CLUB</h3>
+
           <p class="venue-caption">25 November 2026 · Wedding Day</p>
-          <p class="venue-address">Railway Officers Club<br>Kolkata</p>
-          <p class="venue-note">We would be delighted to have you with us on our special day. Tap below for directions to the venue.</p>
-          <a class="map-button" href="https://maps.app.goo.gl/wYiYiDpf44Smzo7C9" target="_blank" rel="noopener noreferrer">📍 OPEN MAP &amp; GET DIRECTIONS</a>
+
+          <p class="venue-address">
+            Railway Officers Club<br>
+            Kolkata
+          </p>
+
+          <p class="venue-note">
+            We would be delighted to have you with us on our special day.
+            Tap below for directions to the venue.
+          </p>
+
+          <a
+            class="map-button"
+            href="https://maps.app.goo.gl/wYiYiDpf44Smzo7C9"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            📍 OPEN MAP &amp; GET DIRECTIONS
+          </a>
         </div>
+
         <p class="footer">WITH LOVE, DIPIKA &amp; PRITAM</p>
-        <a class="scroll-cue dark-cue" href="#memories" aria-label="Scroll down to our memories"><span>OUR MEMORIES</span><strong>↓</strong></a>
+
+        <a
+          class="scroll-cue dark-cue"
+          href="#memories"
+          aria-label="Scroll down to our memories">
+
+          <span>OUR MEMORIES</span>
+          <strong>↓</strong>
+        </a>
+
       </div>
     </section>
 
-    <!-- LAST PAGE: memories gallery; add photos to assets/photo-1.jpg through photo-5.jpg -->
+
+    <!-- PAGE 4: Our Memories gallery -->
     <section class="gallery-section" id="memories">
+
       <p class="section-label">LITTLE MOMENTS, FOREVER MEMORIES</p>
+
       <h2>Our Memories</h2>
-      <p class="gallery-intro">Some moments are meant to be remembered forever.</p>
+
+      <p class="gallery-intro">
+        Some moments are meant to be remembered forever.
+      </p>
+
       <div class="gallery-grid">
-        <figure class="gallery-item gallery-item-tall"><img src="assets/photo-1.jpg" alt="Dipika and Pritam — memory 1" loading="lazy"><figcaption>Us, always</figcaption></figure>
-        <figure class="gallery-item"><img src="assets/photo-2.jpg" alt="Dipika and Pritam — memory 2" loading="lazy"><figcaption>Little moments</figcaption></figure>
-        <figure class="gallery-item"><img src="assets/photo-3.jpg" alt="Dipika and Pritam — memory 3" loading="lazy"><figcaption>Beautiful memories</figcaption></figure>
-        <figure class="gallery-item gallery-item-tall"><img src="assets/photo-5.jpg" alt="Dipika and Pritam — memory 5" loading="lazy"><figcaption>Forever begins</figcaption></figure>
+
+        <figure class="gallery-item gallery-item-tall">
+          <img
+            src="assets/photo-1.jpg"
+            alt="Dipika and Pritam — memory 1"
+            loading="lazy">
+          <figcaption>Us, always</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img
+            src="assets/photo-2.jpg"
+            alt="Dipika and Pritam — memory 2"
+            loading="lazy">
+          <figcaption>Little moments</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img
+            src="assets/photo-3.jpg"
+            alt="Dipika and Pritam — memory 3"
+            loading="lazy">
+          <figcaption>Beautiful memories</figcaption>
+        </figure>
+
+        <figure class="gallery-item gallery-item-tall">
+          <img
+            src="assets/photo-5.jpg"
+            alt="Dipika and Pritam — memory 5"
+            loading="lazy">
+          <figcaption>Forever begins</figcaption>
+        </figure>
+
       </div>
+
       <p class="footer">WITH LOVE, DIPIKA &amp; PRITAM</p>
+
     </section>
+
   </main>
 
   <script src="./script.js" defer></script>
 </body>
 </html>
+```
