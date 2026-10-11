@@ -216,3 +216,14 @@ body.invitation-open .gallery-section { display: block; }
   .cover-names { font-size: clamp(4rem, 17vw, 5.8rem); }
   .cover-script { margin: 23px 0 26px; font-size: 1.8rem; }
 }
+/* Make the couple's names bigger and move them up */
+.hero-content h2 {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  margin-top: -35px;
+  margin-bottom: 18px;
+  line-height: 1.1;
+}
+
+.hero-content h2 span {
+  font-size: 0.85em;
+}
