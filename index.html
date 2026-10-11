@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#641522">
+  <meta name="description" content="Pritam & Dipika invite you to celebrate their reception on 27 November 2026 at 7 PM in Kolkata.">
+  <title>Pritam &amp; Dipika | Reception Invitation</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main>
+    <!-- FIRST PAGE: full-screen background wedding video -->
+    <section class="hero" id="welcome" aria-label="Pritam and Dipika wedding invitation">
+      <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="assets/reception-background.jpg" aria-label="Wedding video background">
+        <source src="assets/wedding-video.mp4" type="video/mp4">
+        Your browser does not support HTML video.
+      </video>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="flower" aria-hidden="true">❦</div>
+        <p class="eyebrow">WITH JOY IN OUR HEARTS, WE INVITE YOU</p>
+        <h1>Pritam <span>&amp;</span> Dipika</h1>
+        <p class="script">to celebrate our reception</p>
+        <div class="divider"></div>
+        <p class="event-date">27 NOVEMBER 2026</p>
+        <p class="event-time">7:00 PM ONWARDS · KOLKATA</p>
+        <button class="video-toggle" id="videoToggle" type="button" aria-label="Pause wedding video" aria-pressed="false">
+          <span class="video-toggle-icon" id="videoToggleIcon" aria-hidden="true">Ⅱ</span>
+          <span class="video-toggle-label" id="videoToggleLabel">Pause video</span>
+        </button>
+        <p class="video-status" id="videoStatus" aria-live="polite">A little film of our love</p>
+        <a class="scroll-cue" href="#greeting" aria-label="Scroll to our greeting"><span>OUR GREETING</span><strong>↓</strong></a>
+      </div>
+    </section>
+
+    <!-- SECOND PAGE: greeting message -->
+    <section class="greeting-section" id="greeting">
+      <div class="greeting-card">
+        <div class="ornament" aria-hidden="true">❦</div>
+        <p class="section-label">WITH LOVE &amp; GRATITUDE</p>
+        <h2>A Celebration<br>of Togetherness</h2>
+        <p class="greeting-script">Dear family and friends,</p>
+        <p class="greeting-message">With hearts full of happiness, we invite you to join us as we celebrate love, laughter, and the beginning of a beautiful new chapter.</p>
+        <p class="greeting-emphasis">Your presence will make our celebration even more special.</p>
+        <p class="greeting-signoff">With love,<br><span>Pritam &amp; Dipika</span></p>
+        <a class="scroll-cue dark-cue" href="#gallery" aria-label="Scroll to our photo gallery"><span>OUR MEMORIES</span><strong>↓</strong></a>
+      </div>
+    </section>
+
+    <!-- PHOTO GALLERY: upload photos into assets/ using photo-1.jpg, photo-2.jpg, etc. -->
+    <section class="gallery-section" id="gallery">
+      <p class="section-label">LITTLE MOMENTS, FOREVER MEMORIES</p>
+      <h2>A Glimpse of Us</h2>
+      <p class="gallery-intro">Some moments are meant to be remembered forever.</p>
+      <div class="gallery-grid">
+        <figure class="gallery-item gallery-item-tall"><img src="assets/photo-1.jpg" alt="Pritam and Dipika — memory 1" loading="lazy"><figcaption>Us, always</figcaption></figure>
+        <figure class="gallery-item"><img src="assets/photo-2.jpg" alt="Pritam and Dipika — memory 2" loading="lazy"><figcaption>Little moments</figcaption></figure>
+        <figure class="gallery-item"><img src="assets/photo-3.jpg" alt="Pritam and Dipika — memory 3" loading="lazy"><figcaption>Beautiful memories</figcaption></figure>
+        <figure class="gallery-item"><img src="assets/photo-4.jpg" alt="Pritam and Dipika — memory 4" loading="lazy"><figcaption>Our story</figcaption></figure>
+        <figure class="gallery-item gallery-item-tall"><img src="assets/photo-5.jpg" alt="Pritam and Dipika — memory 5" loading="lazy"><figcaption>Forever begins</figcaption></figure>
+      </div>
+      <a class="scroll-cue" href="#venue" aria-label="Scroll to reception details"><span>RECEPTION DETAILS</span><strong>↓</strong></a>
+    </section>
+
+    <!-- FINAL PAGE: venue and directions -->
+    <section class="details" id="venue">
+      <div class="details-inner">
+        <p class="section-label">LET'S CELEBRATE TOGETHER</p>
+        <h2>Reception Party</h2>
+        <p class="details-script">Pritam &amp; Dipika</p>
+        <div class="card">
+          <div class="venue-flower" aria-hidden="true">✦</div>
+          <h3>ROYAL PALACE BANQUET</h3>
+          <p class="venue-caption">27 November 2026 · 7:00 PM</p>
+          <p class="venue-address">82, Kaiser Street,<br>Eastern Railway Sealdah,<br>Kolkata – 700014</p>
+          <p class="venue-note">We would be delighted to celebrate this special evening with you. Tap below for directions to the venue.</p>
+          <a class="map-button" href="https://www.google.com/maps/search/?api=1&amp;query=82%2C%20Kaiser%20Street%2C%20Eastern%20Railway%20Sealdah%2C%20Kolkata%20700014" target="_blank" rel="noopener noreferrer">📍 OPEN MAP &amp; GET DIRECTIONS</a>
+        </div>
+        <p class="footer">WITH LOVE, PRITAM &amp; DIPIKA</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>
